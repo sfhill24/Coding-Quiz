@@ -1,3 +1,18 @@
+//Start quiz button
+var button = document.getElementById('start-quiz');
+button.addEventListener("click", removeElement)
+
+
+//Function to remove/display sections
+function removeElement() {
+    console.log("test");
+    document.getElementById("startPage").classList.add("removeDisplay");
+    document.getElementById("quizPages").classList.remove("removeDisplay");
+}
+
+
+
+//Array for quiz questions
 var questions = [
     {
         "question": "Commonly used data types Do NOT include:",
@@ -27,8 +42,12 @@ var questions = [
 
 ];
 
+//For loop to display questions in array one at a time
 var currentPageIndex = 0;
 
 for (var currentPageIndex = 0; currentPageIndex < questions.length; currentPageIndex++) {
     console.log(questions[currentPageIndex].choices);
 }
+
+
+window.prompt("Enter initials:");
